@@ -1,11 +1,11 @@
-local bot_api_key = "TOKEN" --Your telegram bot api key
+local bot_api_key = "239570847:AAFuZHCVzpaMEP-VKZZLAu0LEq6ClJ7ocdY" --Your telegram bot api key
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
 local start = [[ ]] 
 
 function is_admin(msg)
   local var = false
-  local admins = {56693692}-- آیدیتون
+  local admins = {50334606}-- آیدیتون
   for k,v in pairs(admins) do
     if msg.from.id == v then
       var = true
@@ -169,7 +169,7 @@ function bot_run()
 
 	bot = bot.result
 
-	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nId = "..bot.id.."\nDeveloper > @MehdiHS\nChannel > @Black_CH"
+	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nId = "..bot.id.."\nSudo > @imkianoosh\nChannel > @ExitTB"
 	print(bot_info)
 
 	last_update = last_update or 0
@@ -311,16 +311,16 @@ if msg then
 	sendMessage(msg.chat.id,list,true,nil,true)
 	
 	elseif msg.text:match("^/version") then
-	sendMessage(msg.chat.id,'*Black Support Bot*\n\n_Developer_ > [MehdiHS](https://telegram.me/MehdiHS)\n[My Channel](https://telegram.me/black_ch)\n\n _Bot Version_ : *4*',true,nil,true)
+	sendMessage(msg.chat.id,'*Exitbot Sudo > [imkianoosh](https://telegram.me/imkianoosh)\n[My Channel](https://telegram.me/ExitTB)\n',true,nil,true)
 	
     elseif msg.text:match("^/help") and not is_admin(msg) then
-	sendMessage(msg.chat.id,'*Black Support Bot Help:*\n\n\n `-` /version\n`نمایش ورژن ربات`\n\n `-` /plist\n`دریافت لیست قیمت ها برای‌خرید گروه`\n\n `-` /start\n`دریافت اطلاعاتی درباره خرید گروه`',true,nil,true)
+	sendMessage(msg.chat.id,'*Exit Support Bot Help:*\n\n\n `-` /version\n`نمایش ورژن ربات`\n\n `-` /plist\n`دریافت لیست قیمت ها برای‌خرید گروه`\n\n `-` /start\n`دریافت اطلاعاتی درباره خرید گروه`',true,nil,true)
 
 	elseif msg.text:match("^/help") and is_admin(msg) then
-	sendMessage(msg.chat.id,'_Black Support Help_ *(For Admin)*\n\n\n `-` /version\n`نمایش ورژن ربات`\n\n `-` /plist\n`دریافت لیست قیمت ها برای‌خرید گروه`\n\n `-` /start\n`دریافت اطلاعاتی درباره خرید گروه`\n\n `-` /users\n`نمایش تعداد افرادی که در ربات پیام دادند`\n\n `-` /block [reply]\n`بلاک کردن یک شخص با ریپلی`\n\n `-` /unblock [reply]\n`آنبلاک کردن یک شخص با ریپلی`\n\n `-` /setrealm\n`تنظیم گروه اصلی ربات`\n*نکته : اگر این دستور رو در داخل پیوی ربات بفرستید پیام ها به پیوی شما ارسال میشود*\n\n `-` /startmsg [متن]\nYou Can user {USERNAME} and {FirstName}\n`تنظیم یک متن به عنوان متن استارت`\n*نکته: این زمانی که کاربر دستور /start رو ارسال کنه نمایش داده میشه*\n\n `-` /donemsg [متن]\n`تنظیم یک متن برای تایید ارسال شدن پیام`\n\n `-` /help\n`نمایش تنظیمات ربات`\n\n `-` /clean blocklist\n`حذف کردن کل افراد بلاک شده از لیست بلاک شده ها`\n\n `-` /clean users\n`خالی کردن لیست افرادی که از ربات استفاده کرده اند`',true,nil,true)
+	sendMessage(msg.chat.id,'_Exit Support Help_ *(For Admin)*\n\n\n `-` /version\n`نمایش ورژن ربات`\n\n `-` /plist\n`دریافت لیست قیمت ها برای‌خرید گروه`\n\n `-` /start\n`دریافت اطلاعاتی درباره خرید گروه`\n\n `-` /users\n`نمایش تعداد افرادی که در ربات پیام دادند`\n\n `-` /block [reply]\n`بلاک کردن یک شخص با ریپلی`\n\n `-` /unblock [reply]\n`آنبلاک کردن یک شخص با ریپلی`\n\n `-` /setrealm\n`تنظیم گروه اصلی ربات`\n*نکته : اگر این دستور رو در داخل پیوی ربات بفرستید پیام ها به پیوی شما ارسال میشود*\n\n `-` /startmsg [متن]\nYou Can user {USERNAME} and {FirstName}\n`تنظیم یک متن به عنوان متن استارت`\n*نکته: این زمانی که کاربر دستور /start رو ارسال کنه نمایش داده میشه*\n\n `-` /donemsg [متن]\n`تنظیم یک متن برای تایید ارسال شدن پیام`\n\n `-` /help\n`نمایش تنظیمات ربات`\n\n `-` /clean blocklist\n`حذف کردن کل افراد بلاک شده از لیست بلاک شده ها`\n\n `-` /clean users\n`خالی کردن لیست افرادی که از ربات استفاده کرده اند`',true,nil,true)
 
     elseif msg.text:match("^/nerkh") or msg.text:match("^/plist") or msg.text:match("^/planlist") then
-	sendMessage(msg.chat.id,'*لیست قیمت های خرید گروه با* [BlackPlus](https://telegram.me/bIackplus)\n\n `-` *1 ماهه* > `5000` _تومان_\n `-` *3 ماهه* > `10000` _تومان_\n `-` *نامحدود* > `20000` _تومان_ ',true,nil,true)
+	sendMessage(msg.chat.id,'*لیست قیمت های خرید گروه با* [ExitBOT](https://telegram.me/Exityellow)\n\n♨️ ماهانه 5 به صورت کارت به کارت \n♨️ یا 7 شارژ \n\n در ضمن هم برای شما هم ما کارت به کارت گزینه بهتریه !',true,nil,true)
 	
 	elseif msg.text:match("^/clean blocklist") and is_admin(msg) then
 	sendMessage(msg.chat.id,'لیستتتت افراد بلاک شده با موفقیت خالی شد.',true,nil,true)
@@ -384,7 +384,7 @@ while is_running do
 			msg_processor(v.message)
 		end
 	else
-		print("BlackSupport Bot Crashed!!")
+		print("ExitSupport Bot Crashed!!")
 	end
 end
-print("BlackSupport Bot Crashed!!")
+print("ExitSupport Bot Crashed!!")
